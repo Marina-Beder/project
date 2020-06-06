@@ -1,0 +1,41 @@
+/*css for all Pages of the project*/
+
+.food{ background-color:#252F31; color:#FFF; overflow:hidden; }  
+.food a{color:white}
+.food h2{float :left}
+.food h2 span{color:#2ecc71}
+.food ul{list-style:none; padding-left:10; overflow:hidden; float:right; color:white }
+.food ul li{float:left;padding:10px}
+	   /*------------------------------------------------------------------------------*/
+.contain{overflow:hidden; padding-top:30px;padding-bottom:30px } 
+.contain h2{color:#009900} 
+.contain p{color:#009933} 
+.include{float:left;width:25%;height :150px; }
+	   /*------------------------------------------------------------------------------*/
+.Aboutus{background-color:#F2F2F2;overflow:hidden;}
+.Aboutus h2{color:#009900}
+.Aboutus h3{color:#008000}
+.Aboutus ul{color:#009933}
+.img{float:left;width:40%}
+.img img{width:100%}
+.information{float:left;width:60%}
+	   /*------------------------------------------------------------------------------*/
+
+.somemeals{color:#009900;text-align:center;overflow:hidden;padding-top:30px;padding-bottom:30px; }
+.meals{float:left;  }
+.meal {width:40% ;margin-bottom:25px ;margin-right:25px}
+		   /*------------------------------------------------------------------------------*/
+
+.footer{margin-top:20px; padding:10px 0;background-color:#EEE;text-align:center}
+	   /*------------------------------------------------------------------------------*/
+
+.next input{ background-color:#ccffcc;color:#00cc00;padding:10px;width:10%;margin-bottom:10px; 	  float:right}
+	   /*------------------------------------------------------------------------------*/
+
+		/*this for the form in this project*/
+.details h2{color:purple;margin-left:40px;}
+.details P{color:#ff9900}
+.form lable {display:block;color:green ;margin-bottom:10px;margin-top:10px;border:1px}
+.form input{ background-color:#EEE;color:#0040ff ;padding:10px;width:20%;margin-bottom:10px}
+
+@media screen and (max-width:600px)

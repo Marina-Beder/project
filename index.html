@@ -1,0 +1,111 @@
+
+<!DOCTYPE HTML>
+ <html lang="en">
+     <head>
+      <title> Form Page 1 </title>
+	  <meta charset="UTF-8"/>
+	  <link rel="stylesheet" href="project.css" type="text/css"/>
+	  <script>
+	  
+	    function validate()
+		  {
+	        var fname=document.getElementById('fname');
+	        var lname=document.getElementById('lname');
+	   	    var address=document.getElementById('address');
+            var email=document.getElementById('email');
+
+	         if(fname.value==0||fname.value==null )
+			   {
+	             document.getElementById("errorfname").innerHTML=' *You should enter your First name';
+	             document.getElementById("errorfname").style.color='red';
+	           }
+	           else{ document.getElementById("errorfname").innerHTML=''; }
+	 
+             if(lname.value==0||lname.value==null)
+			    {
+	               document.getElementById("errorlname").innerHTML=' *You should enter your Last name';
+                   document.getElementById("errorlname").style.color='red';
+	             }
+	          else{document.getElementById("errorlname").innerHTML=''; }
+	  
+             if(address.value==0||address.value==null)
+		       {
+	             document.getElementById("erroraddress").innerHTML=' *You should enter your Address';
+		         document.getElementById("erroraddress").style.color='red';
+ 	           }
+	         else {document.getElementById("erroraddress").innerHTML=''; }
+	  
+            if(email.value==0||email.value==null)
+		      {
+	            document.getElementById("erroremail").innerHTML=' *You should enterjk your E-mail';
+                document.getElementById("erroremail").style.color='red';
+	          }
+	        else{ document.getElementById("erroremail").innerHTML=''; }
+  
+	      }
+	 
+	   function PasswordTest()
+	     {
+	       var password=document.getElementById("checkpassword").value;
+	       var res = password.charAt(0)
+	       if(password.match(/^\S+$/)&&res.match(/[A-Z]/g)&&password.match(/[0-9]/ )&&password.match(/[^a-zA-Z\d]/g )&&password.length==8)
+	            {
+				   document.getElementById("errorpass").innerHTML='';
+	            return true;
+				}
+	           else
+	               {
+	                 document.getElementById("errorpass").innerHTML=' *This password must donot exceed 8 characters start with uppercase,at least one dgit and special character and no space';
+                     document.getElementById("errorpass").style.color='red';
+	                 return false;
+				   }
+	        }
+          function PhoneTest()
+	        {
+    		   var phone=document.getElementById("checkphone").value;
+               if(phone.length == 11 )
+	              {
+				  document.getElementById("errorphone").innerHTML='';
+	              return true;
+				  }
+	           else
+	                {
+	                document.getElementById("errorphone").innerHTML=' *Your phone must contain 11 numbers';
+                    document.getElementById("errorphone").style.color='red';
+	                return false;
+		     		  }
+	     }
+    </script>
+    </head>
+    <body>
+       <div class="details">
+	       <h2>Your Information</h2><p>Please put your information in this form</p>
+	           <div class="form">
+	                <form action ="Page 2.html" method="post" onsubmit ="PasswordTest()">
+	                   <lable>First Name</lable>
+	                      <input type="text"placeholder="Type Your First Name"   id="fname"required><span id="errorfname"></span>
+	                   <lable>Last Name</lable>
+	                      <input type="text"placeholder="Type Your Last Name" id="lname"required><span id="errorlname"></span>
+	                   <lable>Password</lable>
+	                      <input type="password" placeholder="Type Your Password" id="checkpassword"title="please do this instruction" pattern ="(?=.*^[A-Z])(?=.*[\W])(?=.*[0-9]).{8}" required><span id="errorpass"></span>
+	                   <lable>E-mail</lable>
+	                      <input type="email" placeholder="Type Your E-mail" id="email"required><span id="erroremail"></span>
+                      <lable>Phone Number</lable>
+                          <input type="text"placeholder="Type Your Phone Number"id="checkphone"title="please do this instruction" pattern="[0-9]{11}"required><span id="errorphone"></span>
+	                  <lable>Address</lable>
+		                  <input type="text"placeholder="Type Your Addres"id="address"required><span id="erroraddress"></span>
+                      <lable>gender</lable>
+	                      <input type="radio"name="gender"value="male" required>male<br>
+	                      <input type="radio"name="gender"value="female" >female
+	           </div>
+			             <br><br>
+	                 <span class="next"><input  type="Submit" value="log in" onclick=" validate() , PasswordTest() ,PhoneTest()  "></span>
+                    </form>
+	   </div>
+	             <br><br><br>
+	   <div class="footer">
+	               copyright &copy; 2020
+	   </div>
+	
+	</body>
+  </html>
